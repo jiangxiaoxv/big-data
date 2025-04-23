@@ -22,4 +22,23 @@
    - java中所有字符串字面值都作为此类的实例实现
    - 字符串常量不可变；字符串缓冲区你吃可变的字符串。因为String对象是不可变的，所以可以共享。
    - 字符串在底层是以字符数组存储的
-   - 方法区可以存放：静态常量池、存储类信息、运行时常量池（常量池）
+   - 方法区可以存放：静态常量池、存储类信息、运行时常量池（常量池）；
+   - toCharArray
+   - chatAt
+   - compareTo
+   - compareToIgnoreCase
+   - 对象 instanceof 类/接口 -- 判断对象和类的关系；表示判断对象是否指定类/接口及其父类/父接口的对象
+   - 字符串提供了一系列的操作而不改变原字符串的方法，会产生一个新的字符串； s = s.toUpperCase(), s.toLowerCase();
+   - concat
+   - contains str.contains("g")
+   - endsWith()
+   - startsWith()
+   - getBytes()
+   - hashCode() // 同一个字符串的哈希码在任何条件下都是相通的
+   - indexOf()
+   - lastIndexOf('a', 5) //从指定位置向前找
+   - substring （startIndex, endIndex）
+   - trim()
+   - valueOf // 实际上是调用了这个对象的toString
+5. StringBuilder 类
+   - StringBuilder和StringBuffer中的方法签名一样。StringBuilder是线程不安全的类，StringBuffer是线程安全的

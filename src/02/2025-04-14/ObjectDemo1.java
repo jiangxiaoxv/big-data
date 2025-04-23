@@ -1,4 +1,6 @@
+
 import java.util.Objects;
+
 
 //package src;
 public class ObjectDemo1 implements Cloneable {
