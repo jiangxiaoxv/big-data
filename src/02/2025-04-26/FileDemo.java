@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,7 +42,7 @@ public class FileDemo {
 //        System.out.println("javacount：" + javaCount);
 
 //        System.out.println(file.isAbsolute());;
-        System.out.println(file.exists());
+//        System.out.println(file.exists());
 //        file.setExecutable(false);// 让文件是否可执行
 //        file.setReadable(true);
 //        file.setWritable(true);
@@ -56,9 +57,9 @@ public class FileDemo {
 //        System.out.println(file.getParent());
 //        System.out.println(file.getName());
 
-        System.out.println(File.separatorChar);
-        System.out.println(File.separator);
-        System.out.println(File.pathSeparator);
+//        System.out.println(File.separatorChar);
+//        System.out.println(File.separator);
+//        System.out.println(File.pathSeparator);
         File[] fs = file.listFiles(new FileFilter() {
             // 参数表示当前目录下的子目录和子文件
             @Override
@@ -70,7 +71,21 @@ public class FileDemo {
         File[] fs2 = file.listFiles(pathname -> pathname.isFile());
         File[] fs3 = file.listFiles(pathname -> pathname.isDirectory());
 
-        File[] fs4 = file.listFiles()
+        File[] fs4 = file.listFiles(new FilenameFilter() {
+            // dir表示文件所在的父目录
+            // name表示文件或者目录的名字
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.matches(".*\\d.*");
+            }
+        });
+
+
+        // 路径不改变而文件名改变的情况下；做的是重命名
+        // 文件名改变而路径改变，做的是剪切
+        // 要求存放的路径中没有同名文件
+        boolean bfile = file.renameTo(new File("./src/02/2025-04-27/readme.md"));
+
 
 
 
