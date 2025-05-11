@@ -21,6 +21,9 @@
     - 数据的来源/目的地：硬盘、内存、网络(套接字)、输入设备、
     - 向txt文件中写入一个字符串 --- 字符流、输出流 ---> 和文件相关的流 --> FileWriter
 
+# 字节流
+java中的原生的字符流只能操作字符类文件 txt，html, java等等，但是不能读取office组件、音频、视频
+
 1. FileWriter
    - 将流对象放到try之外声明并且赋值为null，放到try之内创建
    - 关流之前需要判断流对象是否初始化成功
@@ -33,4 +36,29 @@
    - 提供了缓冲区，能够换行读取
    - 利用FileReader来构建了BufferedReader，然后再BufferedReader来读取功能做了增强
    - 这种方式称之为装饰设计模式 --- 利用了同类对象构建自己对象本身，对 对象身上的功能做了增强或者改善
-   - 
+   
+4. BufferedWriter 
+   - 提供了一个更大缓冲区，相比FileWriter
+
+# 字符流
+1. FileInputStream
+   - 一般缓冲区 10 - 15M
+2. FileOutputStream
+
+# 系统流/标准流
+1. System.in 标准输入流
+2. System.out 标准输出流
+3. System.error 标准错误流
+
+
+# 转换流
+字符流和字节流之间用的转换就是转换流
+1. 转换输出 OutputStreamWriter --- 将字符流转化为字节流 FileWriter是其子类
+
+2. 转化输入 InputStreamReader --- 将字节流转化为字符流. FileReader 是其子类
+
+# 合并流
+将多个流合并成一个
+1. SequenceInputStream 
+   - 表示其他输入流的逻辑串联，输入流的有序集合
+   - 创建
