@@ -1,0 +1,14 @@
+/out/            # IntelliJ IDEA 默认输出目录
+/build/          # Gradle 构建输出目录
+
+# IDE 配置文件
+.idea/           # IntelliJ IDEA 配置目录
+*.iml            # IntelliJ IDEA 模块文件
+.vscode/         # VS Code 配置目录
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.temp

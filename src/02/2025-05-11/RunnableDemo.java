@@ -3,7 +3,7 @@ public class RunnableDemo {
     public static void main(String[] args) {
         RDemo r = new RDemo();
         Thread t = new Thread(r);
-//        t.start();
+        t.start();
 
 
 //        Runnable r2 = new Runnable() {
@@ -14,7 +14,7 @@ public class RunnableDemo {
 //        };
 
 //        Runnable r3 = () -> System.out.println("hello");
-        new Thread(() -> System.out.println("hello3")).start();
+//        new Thread(() -> System.out.println("hello3")).start();
     }
 }
 
