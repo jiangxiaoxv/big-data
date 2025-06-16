@@ -22,3 +22,11 @@
     1. 基于流的，建立连接，经历三次握手
     2. 可靠，但是传输速率相对较慢
     3. 理论上不限制数据的大小，适用于可靠性的依赖性更高对速度依赖性较低的场景 --- 文件传输
+    4. receive/connect/accept/write/read 都会产生阻塞
+
+# 扩展
+    1. BIO - Blocking IO - 同步时阻塞式IO
+    2. NIO - New IO -- NonBlocking IO -  同步式非阻塞式IO JDK1.4出现的
+    3. AIO - Asynchronous IO - 异步式非阻塞式IO - JDK1.8
+
+
