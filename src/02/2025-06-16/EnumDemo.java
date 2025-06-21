@@ -9,6 +9,8 @@ public abstract class EnumDemo {
         Season3 s3 = Season3.Spring;
         s3.work();
 
+//        System.out.println(Season.Spring);
+
         switch (s3) {
             case Spring:
                 System.out.println("Spring");
